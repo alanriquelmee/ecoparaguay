@@ -76,57 +76,36 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         };
 });
-let mapa;
-let marcador;
 
-function inicializarMapa() {
-  const centroInicial = { lat: -25.2637, lng: -57.5759 }; // Centro en Asunción
+  let map;
+  let marcador;
 
-  mapa = new google.maps.Map(document.getElementById("map"), {
-    zoom: 14,
-    center: centroInicial,
-  });
+  function inicializarMapa() {
+    const centroInicial = { lat: -25.3000, lng: -57.5800 };
 
-  mapa.addListener("click", (evento) => {
-    colocarMarcador(evento.latLng);
-  });
-}
+    map = new google.maps.Map(document.getElementById("map"), {
+      center: centroInicial,
+      zoom: 13,
+    });
 
-function colocarMarcador(ubicacion) {
-  if (marcador) {
-    marcador.setMap(null); // Eliminar marcador anterior
+    // Permitir agregar un marcador al hacer clic
+    map.addListener("click", function (e) {
+      colocarMarcador(e.latLng);
+    });
   }
 
-  marcador = new google.maps.Marker({
-    position: ubicacion,
-    map: mapa,
-  });
-
-  // Actualizar inputs ocultos con coordenadas
-  document.getElementById("lat").value = ubicacion.lat();
-  document.getElementById("lng").value = ubicacion.lng();
-}
-
-// (Opcional) Manejo del formulario
-document.addEventListener("DOMContentLoaded", () => {
-  document.getElementById("form-denuncia").addEventListener("submit", (e) => {
-    e.preventDefault();
-    const descripcion = document.getElementById("descripcion").value;
-    const lat = document.getElementById("lat").value;
-    const lng = document.getElementById("lng").value;
-
-    if (!lat || !lng) {
-      alert("Por favor seleccioná una ubicación en el mapa.");
-      return;
+  function colocarMarcador(latLng) {
+    if (marcador) {
+      marcador.setPosition(latLng);
+    } else {
+      marcador = new google.maps.Marker({
+        position: latLng,
+        map: map,
+        draggable: true,
+      });
     }
 
-    console.log("Denuncia enviada:", { descripcion, lat, lng });
-
-    // Acá podrías enviar los datos por fetch() o armar el enlace a WhatsApp/email
-    alert("¡Denuncia registrada!");
-  });
-});
-
-
-
+    // Puedes almacenar las coordenadas en un input oculto si lo necesitas:
+    console.log("Latitud:", latLng.lat(), "Longitud:", latLng.lng());
+  }
 
