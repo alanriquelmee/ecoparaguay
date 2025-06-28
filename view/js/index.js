@@ -67,14 +67,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             });
         });
-            
-            // Show SweetAlert even without the library (simplified version)
-        window.Swal = {
-            fire: function(options) {
-            alert(options.title + "\n" + options.text);
-            return Promise.resolve({ isConfirmed: true });
-            }
-        };
+        
 });
 
   let map;
