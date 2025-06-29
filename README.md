@@ -1,6 +1,6 @@
 # 🌿 ECOPARAGUAY
 
-Proyecto frontend para reportar problemas ambientales como contaminación, deforestación o maltrato animal. Incluye un formulario accesible, mapa interactivo con selección de ubicación y previsualización de archivos adjuntos.
+Proyecto para reportar problemas ambientales como contaminación, deforestación o maltrato animal. Incluye un formulario accesible, mapa interactivo con selección de ubicación y previsualización de archivos adjuntos.
 
 ---
 
@@ -47,7 +47,7 @@ Proyecto frontend para reportar problemas ambientales como contaminación, defor
 
 ---
 
-## 🙋‍♀️ Autora
+## 🙋‍♀️ Autores 
 
 **Alan**<br>
 **Mati**<br>
