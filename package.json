@@ -1,27 +1,23 @@
 {
   "name": "ecoparaguay",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Proyecto para reportar problemas ambientales como contaminación, deforestación o maltrato animal. Incluye un formulario accesible, mapa interactivo con selección de ubicación y previsualización de archivos adjuntos.",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/alanriquelmee/ecoparaguay.git"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/alanriquelmee/ecoparaguay/issues"
-  },
-  "homepage": "https://github.com/alanriquelmee/ecoparaguay#readme",
   "dependencies": {
-    "axios": "^1.10.0",
+    "@sendgrid/mail": "^8.1.5",
     "cors": "^2.8.5",
     "dotenv": "^17.0.0",
-    "express": "^5.1.0"
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "mongoose": "^8.16.1",
+    "multer": "^2.0.1"
   },
   "devDependencies": {
     "nodemon": "^3.1.10"
