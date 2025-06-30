@@ -50,6 +50,6 @@ Proyecto para reportar problemas ambientales como contaminación, deforestación
 ## 🙋‍♀️ Autores 
 
 **Alan**<br>
-**Mati**<br>
+**Matias**<br>
 **Mario**<br>
 **Jazmin**<br>
