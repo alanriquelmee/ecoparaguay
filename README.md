@@ -46,10 +46,11 @@ Proyecto para reportar problemas ambientales como contaminación, deforestación
 * [ ] Validación con reCAPTCHA para evitar spam
 
 ---
+## Idea: Alan Riquelme 
 
-## 🙋‍♀️ Autores 
+## 🙋‍♀️ Autores del Programa
 
-**Alan.**<br>
-**Mati.**<br>
-**Mario Espinola.**<br>
-**Jazmin.**<br>
+**Alan Riquelme**<br>
+**Matias Samudio**<br>
+**Mario Espinola**<br>
+**Jazmin Alonso**<br>
